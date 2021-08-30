@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 //  res.send('Hello World');
  res.statusCode = 200;
  res.setHeader("Content-Type", "text/html");
- switch (req.url) {
+ switch (req.path) {
    case "/home":
      res.writeHead(200);
      res.end("This is Home page<p>");
@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
      break;
    default:     
      res.writeHead(200);
-     res.end("This is Default page.  Other pages are /home and /about" + req.url);
+     res.end("This is Default page.  Other pages are /home and /about" + req.path);
      break;
  }
 });
