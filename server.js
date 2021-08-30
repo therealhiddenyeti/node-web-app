@@ -11,8 +11,10 @@ const app = express();
 app.get('/', (req, res) => {
 //  res.send('Hello World');
  res.statusCode = 200;
- res.setHeader("Content-Type", "text/html");
- switch (req.path) {
+ res.setHeader("Content-Type", "text/html");    
+ var path = req.url;
+ switch(path){
+ //switch (req.path) {
    case "/home":
      res.writeHead(200);
      res.end("This is Home page<p>");
