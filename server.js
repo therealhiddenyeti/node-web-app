@@ -23,7 +23,8 @@ app.get('/', (req, res) => {
      break;
    default:     
      res.writeHead(200);
-     res.end("This is Default page.  Other pages are /home and /about<p>");
+     res.end("This is Default page.  Other pages are /home and /about");
+     res.end("req.url");
      break;
  }
 });
