@@ -25,7 +25,7 @@ app.get('/*', (req, res) => {
      break;
    default:     
      res.writeHead(200);
-     res.end("This is Default page.  Other pages are /home and /about" + req.path);
+     res.end("This is Default page.  Other pages are /home and /about and /yeti" + req.path);
      break;
  }
 });
